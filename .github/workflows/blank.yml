@@ -34,3 +34,8 @@ jobs:
           echo "Este es el valor de plataforma: ${{env.platform}}"
           echo "Valor de region: ${{env.region}}"
           echo "Este es el valor de region: ${{env.acount}}"
+      - name: "Mostrando variables por defecto"
+        run: |
+          echo "Este es el valor de plataforma: ${{github.event}}"
+
+        
