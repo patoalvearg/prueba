@@ -30,7 +30,6 @@ jobs:
         run: echo "Hola mundo"
       - name: "Mostrando variables de entorno"
         run: |
-          echo "Este es el valor de: ${{env.platform}}"
-          echo "Valor de: ${{env.region}}
-          echo "Acount: ${{env.acount}}
-      
+          echo "Este es el valor de plataforma: ${{env.platform}}"
+          echo "Valor de region: ${{env.region}}
+          echo "Este es el valor de region: ${{env.acount}}
