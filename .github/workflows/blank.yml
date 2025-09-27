@@ -10,6 +10,7 @@ on:
 
   # Para ejecutar un workflow manualmente
   workflow_dispatch:
+    
 
 # Jobs son una serie de pasos que se ejecutan
 jobs:
@@ -17,9 +18,19 @@ jobs:
   build:
     # Va a ejecutar una máquina de ubuntu temporal
     runs-on: ubuntu-latest
+    #Variables de entorno
+    env:
+      platform: aws
+      region: us-east-1
+      acount: 12345678
 
     # Detallamos los pasos que necesitamos ejecutar
     steps:
       - name: "Mostrar mensaje"
         run: echo "Hola mundo"
+      - name: "Mostrando variables de entorno"
+        run: |
+          echo "Este es el valor de: ${{env.platform}}"
+          echo "Valor de: ${{env.region}}
+          echo "Acount: ${{env.acount}}
       
