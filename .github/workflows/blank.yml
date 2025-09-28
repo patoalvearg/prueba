@@ -37,5 +37,7 @@ jobs:
       - name: "Mostrando variables por defecto"
         run: |
           echo "Este es el valor de plataforma: ${{toJson(github.event)}}"
+          echo "GithubActor: $GITHUB_ACTOR"
+          echo "GithubRepositorio: $GITHUB_REPOSITORY"
 
         
