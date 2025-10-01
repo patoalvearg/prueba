@@ -7,11 +7,9 @@ on:
   push:
     branches: [ "main" ]
 
-
-  # Para ejecutar un workflow manualmente
+# Para ejecutar un workflow manualmente
   workflow_dispatch:
     
-
 # Jobs son una serie de pasos que se ejecutan
 jobs:
   # Tiene un job que se llama buid
@@ -23,7 +21,7 @@ jobs:
       platform: aws
       region: us-east-1
       acount: 12345678
-
+     
     # Detallamos los pasos que necesitamos ejecutar
     steps:
       - name: "Mostrar mensaje"
@@ -40,4 +38,11 @@ jobs:
           echo "GithubActor: $GITHUB_ACTOR"
           echo "GithubRepositorio: $GITHUB_REPOSITORY"
 
-        
+  other:
+    
+    runs-on: ubuntu-latest
+   
+    steps:
+      - name: "LS"
+        run: ls -al
+     
